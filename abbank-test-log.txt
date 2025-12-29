@@ -1,0 +1,70 @@
+PS D:\hoc-tap\abbank\qe-test> mvn test 
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.example:qe-test >-------------------------
+[INFO] Building qe-test 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ qe-test ---
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ qe-test ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 1 source file with javac [debug target 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ qe-test ---
+[INFO] Copying 2 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ qe-test ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 8 source files with javac [debug target 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ qe-test ---
+[INFO] Using auto detected provider org.apache.maven.surefire.testng.TestNGProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running TestSuite
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+
+Scenario: Get total open issues and highest stars # src/test/resources/features/api/apiGitrepos.feature:4
+  â?? Given get all repositories from SeleniumHQ    # apitest.getInfoGithub.fetchRepos()
+  â?? When calculate total open issues              # apitest.getInfoGithub.calculateIssues()
+  â?? And find repository with highest stars        # apitest.getInfoGithub.findTopRepo()
+Total open issues: 1461
+Top star repository: selenium (33824)
+  â?? Then print the result                         # apitest.getInfoGithub.printResults()
+
+1 scenarios (1 passed)
+4 steps (4 passed)
+0m 5.260s
+
+Scenario: Successfully create a new user                      # src/test/resources/features/ui/create_user.feature:3
+  â?? Given open the OrangeHRM login page                       # uitest.createUser.openLogin()
+  â?? And login using default credentials                       # uitest.createUser.login()
+  â?? When navigate to Admin User Management                    # uitest.createUser.goToAdmin()
+  â?? And create a new user with valid information              # uitest.createUser.createnewUser()
+  â?? Then verify that the user has been created successfully   # uitest.createUser.verifySuccess()
+  â?? When search for the newly created user using the username # uitest.createUser.searchUser()
+Search validation successful! Actual: Test54a8e, Expected: Test54a8e
+  â?? Then should see the user listed in the search results     # uitest.createUser.verifyUserInResults()
+
+1 scenarios (1 passed)
+7 steps (7 passed)
+0m 21.843s
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.76 s -- in TestSuite
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  36.882 s
+[INFO] Finished at: 2025-12-29T10:05:35+07:00
+[INFO] ------------------------------------------------------------------------
