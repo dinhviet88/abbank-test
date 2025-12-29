@@ -30,4 +30,4 @@ Project is using for test example
 - Run API TC :  mvn test "-Dcucumber.filter.tags=@api"
 Or Can run on IDE file Runner.
 
-Thank for Reading
+Thank for Reading.
