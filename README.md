@@ -10,22 +10,17 @@ Project is using for test example
 - Code by Java program langue
 
 2. Set up intructions :
-src
- ├── main
- │    └── java
- │         └── utils
- │              └── ApiClient.java        # Reusable API client
- │
- └── test
-      ├── java
-      │    ├── apitest                    # Step definitions + runner API
-      │    ├── uitest                     # Step definitions + runner UI
-      │    └── keyworld                  # Common keywords 
-      │
-      └── resources
-           └── features
-                ├── api                   # Feature files cho API
-                └── ui                    # Feature files cho UI
++src:
+- main/java/utils/ApiClient.java        # Reusable API client
+- test:
+  +java: 
+    - apitest                    # Step definitions + runner API
+    - uitest                     # Step definitions + runner UI
+    - keyworld                  # Common keywords 
+  +resources
+    - features
+       + api                   # Feature files cho API
+       + ui                    # Feature files cho UI
 3. Requirement:
 - Java 17+
 - Maven 3+
