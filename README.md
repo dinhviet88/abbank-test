@@ -13,11 +13,11 @@ Project is using for test example
 +src:
 - main/java/utils/ApiClient.java        # Reusable API client
 - test:
-  +java: 
+  + java: 
     - apitest                    # Step definitions + runner API
     - uitest                     # Step definitions + runner UI
-    - keyworld                  # Common keywords 
-  +resources
+    - keyworld                  # Common keywords
+  + resources:
     - features
        + api                   # Feature files cho API
        + ui                    # Feature files cho UI
