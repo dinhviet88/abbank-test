@@ -1,5 +1,4 @@
 QUALITY ENGINEER (QE) – AUTOMATION DEVELOPMENT CHALLENGE
-abbank-test technical automation test
 
 1. Over View:
 Project is using for test example
